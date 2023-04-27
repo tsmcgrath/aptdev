@@ -9,13 +9,13 @@ defaultMapOpts = {
    ,minZoom: 1
    ,maxZoom: 18
    ,zoom: 9
-   ,url: "https://tsmcgrath.github.io/aptdev/?"
+   ,url: "https://tsmcgrath.github.io./?"
 }
 
 const trail = [
    {
       id: 'lowRes'
-      ,url: 'https://tsmcgrath.github.io/aptdev/data/vector/jmtLow.fgb'
+      ,url: 'https://tsmcgrath.github.io./data/vector/jmtLow.fgb'
       ,minZoom: 1
       ,maxZoom: 12
       ,loadingId: 'loading'
@@ -25,7 +25,7 @@ const trail = [
    }
    ,{
       id: 'highRes'
-      ,url: 'https://tsmcgrath.github.io/aptdev/data/vector/jmtHi.fgb'
+      ,url: 'https://tsmcgrath.github.io./data/vector/jmtHi.fgb'
       ,minZoom: 13
       ,maxZoom: 20
       ,loadingId: 'loading'
@@ -81,7 +81,7 @@ groups = [
             ,visible: 1
             ,layers: [
                {
-                  url: 'https://tsmcgrath.github.io/aptdev/data/vector/milemarkers_lowres.fgb'
+                  url: 'https://tsmcgrath.github.io./data/vector/milemarkers_lowres.fgb'
                   ,type: "FGB"
                   ,featureFn: markers.mileMarkerFn
                   ,update: 2
@@ -92,7 +92,7 @@ groups = [
                   ,color: "#964B00"
                }
                ,{
-                  url: 'https://tsmcgrath.github.io/aptdev/data/vector/milemarkers_hires.fgb'
+                  url: 'https://tsmcgrath.github.io./data/vector/milemarkers_hires.fgb'
                   ,type: "FGB"
                   ,featureFn: markers.mileMarkerFn
                   ,update: 2
@@ -132,7 +132,7 @@ groups = [
             }
             ,layers: [
                {
-                  url: "https://tsmcgrath.github.io/aptdev/data/raster/prec_annual.tif"
+                  url: "https://tsmcgrath.github.io./data/raster/prec_annual.tif"
                   ,id: "annprec"
                   ,type: "COG"
                   ,loadingId: 'loading'

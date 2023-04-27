@@ -1,4 +1,4 @@
 # aptdev
 
 ## Tests
-[Test 1](https://tsmcgrath.github.io/aptdev/)
+[Test 1](https://tsmcgrath.github.io./)
