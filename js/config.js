@@ -15,7 +15,7 @@ defaultMapOpts = {
 const trail = [
    {
       id: 'lowRes'
-      ,url: 'https://tsmcgrath.github.io./data/vector/CaliforniaPrimary_v1.4.fgb'
+      ,url: 'https://tsmcgrath.github.io./data/vector/CaliforniaPrimary_lowrez_v1.3.fgb'
       ,minZoom: 1
       ,maxZoom: 12
       ,loadingId: 'loading'
@@ -25,7 +25,7 @@ const trail = [
    }
    ,{
       id: 'highRes'
-      ,url: 'https://tsmcgrath.github.io./data/vector/CaliforniaPrimary_v1.4.fgb'
+      ,url: 'https://tsmcgrath.github.io./data/vector/CaliforniaPrimary_lowrez_v1.3.fgb'
       ,minZoom: 13
       ,maxZoom: 20
       ,loadingId: 'loading'
