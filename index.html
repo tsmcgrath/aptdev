@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>APT-Dev Interactive Map</title>
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="">
+   <link rel="stylesheet" type="text/css" href="/aptdev/css/site.css" crossorigin="">
+   <link rel="stylesheet" type="text/css" href="/aptdev/css/map.css" crossorigin="">
+   <link rel="stylesheet" type="text/css" href="/aptdev/css/jsLegend.css" crossorigin="">
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
+   <script src="/aptdev/js/underscore-min.js" crossorigin=""></script>
+   <script src="/aptdev/js/flatgeobuf-geojson.min.js" crossorigin=""></script>
+   <!--script src="/aptdev/js/json-formatter-js" crossorigin=""></script-->
+   <script src="/aptdev/js/proj4.js" crossorigin=""></script>
+   <script src="/aptdev/js/georaster.js" crossorigin="" defer></script>
+   <script src="/aptdev/js/georaster-layer-for-leaflet.js" crossorigin="" defer></script>
+   <script src="/aptdev/js/jsLegend.js" crossorigin="" defer></script>
+   <script src="/aptdev/js/class.js" crossorigin="" defer></script>
+   <script src="/aptdev/js/map.js" crossorigin="" defer></script>
+   <script src="/aptdev/js/config.js" crossorigin="" defer></script>
+</head>
+<body onload="initMap()" style="font-family: arial;">
+<div id="groups" onclick="util.toggleDiv('groups')">
+   <span class="boldFont">Layers:</span><br> 
+</div>
+
+<div id="map" style="background: white;">
+   <div id="layers" onclick="util.toggleDiv('groups')">
+      <img alt="layers icon" src="/aptdev/images/settingsIconx100.png" style="max-width: 50px;">
+   </div>
+   <img alt="cross hair" id="crosshair" src="/aptdev/images/crossHair.gif">
+   <div id="loading">Loading...</div>
+</div>
+<div id="info">
+   <strong>Decimal Degrees:</strong><br>
+   <span id="latlon">-&nbsp;&nbsp;-</span><br>
+   <span id="bounds"></span>
+</div>
+<div id="legend"></div>
+</body>
+</html>
+
