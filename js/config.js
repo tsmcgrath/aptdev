@@ -9,7 +9,7 @@ defaultMapOpts = {
    ,minZoom: 1
    ,maxZoom: 18
    ,zoom: 9
-   ,url: "https://tsmcgrath.github.io./?"
+   ,url: "./?"
 }
 
 const trail = [
@@ -81,7 +81,7 @@ groups = [
             ,visible: 1
             ,layers: [
                {
-                  url: 'https://tsmcgrath.github.io./data/vector/milemarkers_lowres.fgb'
+                  url: './data/vector/milemarkers_lowres.fgb'
                   ,type: "FGB"
                   ,featureFn: markers.mileMarkerFn
                   ,update: 2
@@ -92,7 +92,7 @@ groups = [
                   ,color: "#964B00"
                }
                ,{
-                  url: 'https://tsmcgrath.github.io./data/vector/milemarkers_hires.fgb'
+                  url: './data/vector/milemarkers_hires.fgb'
                   ,type: "FGB"
                   ,featureFn: markers.mileMarkerFn
                   ,update: 2
@@ -132,7 +132,7 @@ groups = [
             }
             ,layers: [
                {
-                  url: "https://tsmcgrath.github.io./data/raster/prec_annual.tif"
+                  url: "./data/raster/prec_annual.tif"
                   ,id: "annprec"
                   ,type: "COG"
                   ,loadingId: 'loading'
