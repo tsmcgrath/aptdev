@@ -44,16 +44,16 @@ groups = [
       ,opt: "radio"
       ,layers: [
          { 
-            id: "osm"
-            ,name: "Open Street Map"
+            id: "esri"
+            ,name: "ESRI World Topo"
             ,selected: 1
             ,layers: [
                {
-                  url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                  url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
                   ,type: "WMTS"
                   ,minZoom: 1
-                  ,maxZoom: 19
-                  ,attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">OSM</a> '
+                  ,maxZoom: 20
+                  ,attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
                }
             ]
          }
