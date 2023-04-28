@@ -81,7 +81,7 @@
                 }
             })
             // show some per-feature properties when clicking on the feature
-            .bindPopup(`<h1>${feature.properties["NAME"]} ${feature.properties["LSAD"]}, ${feature.properties["STATE"]}</h1>`)
+            .bindPopup(`<h1>${feature.properties["status"]} ${feature.properties["partner"]}, ${feature.properties["state"]}</h1>`)
             .addTo(map);
         }
     });
