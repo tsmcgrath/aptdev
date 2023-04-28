@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Quick Start - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <script src="./js/flatgeobuf-geojson.min.js" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 800px;
+			width: 1200px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+
+<h3> American Perimeter Trail Test1</h3>
+<div id="map"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded, async () => {}" {
+    let map = L.map('map').setView([33.8734, -115.9010], 12);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 20,
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+    }).addTo(map);
+
+            // optionally show some meta-data about the FGB file
+        function handleHeaderMeta(headerMeta) {
+            const header = document.getElementById('header')
+            const formatter = new JSONFormatter(headerMeta, 10)
+            header.appendChild(formatter.render())
+        }
+
+        const response = await fetch("./data/CaliforniaPrimary_v1.4.fgb");
+
+        for await (let feature of flatgeobuf.deserialize(response.body, undefined, handleHeaderMeta)) {
+                // Leaflet styling
+                const defaultStyle = { 
+                    color: 'blue', 
+                    weight: 2
+                };
+
+                // Add the feature to the map
+                L.geoJSON(feature, { 
+                    style: defaultStyle 
+                }).on({
+                    // highlight on hover
+                    'mouseover': function(e) {
+                        const layer = e.target;
+                        layer.setStyle({
+                            color: 'blue',
+                            weight: 4,
+                            fillOpacity: 0.7,
+                        });
+                        layer.bringToFront();
+                    },
+                    // remove highlight when hover stops
+                    'mouseout': function(e) {
+                        const layer = e.target;
+                        layer.setStyle(defaultStyle);
+                    }
+                })
+                // show some per-feature properties when clicking on the feature
+                .bindPopup(`<h1>${feature.properties["status"]} ${feature.properties["label"]}, ${feature.properties["state"]}</h1>`)
+                .addTo(map);
+            }
+    
+	//var map = L.map('map').setView([33.8734, -115.9010], 12);
+
+});
+
+
+</script>
+
+</body>
+</html>
