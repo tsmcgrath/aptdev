@@ -20,12 +20,12 @@ const trail = [
       ,maxZoom: 12
       ,loadingId: 'loading'
       ,name: ''
-      ,style: { color: '#cc0000', weight: 3, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 3, zIndex: 3000 }
       ,update: 1
    }
    ,{
       id: 'highRes'
-      ,url: './data/vector/CaliforniaPrimary_lowrez_v1.3.fgb'
+      ,url: './data/vector/APThigh_2023v1.3.fgb'
       ,minZoom: 13
       ,maxZoom: 20
       ,loadingId: 'loading'
@@ -33,7 +33,7 @@ const trail = [
       ,bbox: 'viewport'
       ,pad: .05
       ,name: ''
-      ,style: { color: '#cc0000', weight: 3, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 3, zIndex: 3000 }
    }
 ];
 
