@@ -58,16 +58,16 @@ groups = [
             ]
          }
          ,{
-            id: "usgs"
-            ,name: "USGS Imagery"
+            id: "esri_img"
+            ,name: "ESRI Imagery"
             ,selected: 0
             ,layers: [
                {
-                  url: 'https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}'
+                  url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
                   ,type: "WMS"
                   ,minZoom: 1
                   ,maxZoom: 20
-                  ,attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+                  ,attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
                }
             ]
          }
