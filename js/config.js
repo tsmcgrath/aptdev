@@ -17,7 +17,7 @@ const trail = [
       id: 'lowRes'
       ,url: './data/vector/APTlow_2023v1.3.fgb'
       ,minZoom: 1
-      ,maxZoom: 12
+      ,maxZoom: 13
       ,loadingId: 'loading'
       ,name: ''
       ,style: { color: '#51215a', weight: 2, zIndex: 3000 }
@@ -26,7 +26,7 @@ const trail = [
    ,{
       id: 'highRes'
       ,url: './data/vector/APThigh_2023v1.3.fgb'
-      ,minZoom: 13
+      ,minZoom: 14
       ,maxZoom: 20
       ,loadingId: 'loading'
       ,update: 2

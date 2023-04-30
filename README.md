@@ -10,4 +10,4 @@
 
 [Test 2 - simple leaflet with APT .fgb file](./testmap2.html)
 
-[Embedded page test](./embedtest.html)
+[Embedded page test](https://tsmcgrath.github.io/aptdev/embedtest.html)
