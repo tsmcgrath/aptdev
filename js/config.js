@@ -15,7 +15,7 @@ defaultMapOpts = {
 const trail = [
    {
       id: 'lowRes'
-      ,url: './data/vector/CaliforniaPrimary_lowrez_v1.3.fgb'
+      ,url: './data/vector/APTlow_2023v1.3.fgb'
       ,minZoom: 1
       ,maxZoom: 12
       ,loadingId: 'loading'
