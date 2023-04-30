@@ -2,7 +2,7 @@
 
 ## Tests
 
-[Main page being edited](https://tsmcgrath.github.io/aptdev/)
+[Main page being edited](https://tsmcgrath.github.io/aptdev/index.html)
 
 [Basemaps](https://tsmcgrath.github.io./aptdev/basemaps.html)
 
