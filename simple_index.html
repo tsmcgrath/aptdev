@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
-    <script src="./js/flatgeobuf-geojson.min.js" crossorigin=""></script>
+    <script src="https://unpkg.com/flatgeobuf@3.22.0/dist/flatgeobuf-geojson.min.js"></script>
+    <script src="https://unpkg.com/json-formatter-js"></script>
 
 	<style>
 		html, body {
@@ -43,13 +44,6 @@
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-
-        // optionally show some meta-data about the FGB file
-        function handleHeaderMeta(headerMeta) {
-            const header = document.getElementById('header')
-            const formatter = new JSONFormatter(headerMeta, 10)
-            header.appendChild(formatter.render())
-        }
 
         const response = await fetch('./data/vector/CaliforniaPrimary_v1.4.fgb');
         for await (let feature of flatgeobuf.deserialize(response.body, undefined, handleHeaderMeta)) {
