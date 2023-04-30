@@ -5,10 +5,10 @@ uriParms = {};
 isMobile = false;
 
 defaultMapOpts = {
-   center: { lat: 37.205, lng: -118.805 }
+   center: { lat: 38.925229, lng: -97.558594 }
    ,minZoom: 1
-   ,maxZoom: 18
-   ,zoom: 9
+   ,maxZoom: 20
+   ,zoom: 5
    ,url: "./?"
 }
 
@@ -20,7 +20,7 @@ const trail = [
       ,maxZoom: 12
       ,loadingId: 'loading'
       ,name: ''
-      ,style: { color: '#51215a', weight: 3, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 1, zIndex: 3000 }
       ,update: 1
    }
    ,{
@@ -33,7 +33,7 @@ const trail = [
       ,bbox: 'viewport'
       ,pad: .05
       ,name: ''
-      ,style: { color: '#51215a', weight: 3, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 1, zIndex: 3000 }
    }
 ];
 
