@@ -8,6 +8,6 @@
 
 [Test 1 - Scott's demo with APT .fgb file](./index.html)
 
-[Test 2 - simple leaflet with APT .fgb file](./testmap2.html)
+[Test 2 - simple leaflet with APT .fgb file (currently failing)](./testmap2.html)
 
 [Embedded page test](https://tsmcgrath.github.io/aptdev/embedtest.html)
