@@ -20,7 +20,7 @@ const trail = [
       ,maxZoom: 12
       ,loadingId: 'loading'
       ,name: ''
-      ,style: { color: '#51215a', weight: 1, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 2, zIndex: 3000 }
       ,update: 1
    }
    ,{
@@ -33,7 +33,7 @@ const trail = [
       ,bbox: 'viewport'
       ,pad: .05
       ,name: ''
-      ,style: { color: '#51215a', weight: 1, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 2, zIndex: 3000 }
    }
 ];
 
