@@ -1,4 +1,6 @@
 # aptdev
+Acknowledgement:
+Code provided by Scott Parks of postholer.com. He retains all rights. Thank you Scott. Modifications made for the American Perimeter Trail live web map.
 
 ## Tests
 
