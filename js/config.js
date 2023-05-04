@@ -23,6 +23,27 @@ const trail = [
       ,name: ''
       ,style: { color: '#51215a', weight: 2, zIndex: 3000 }
       ,update: 1
+      /* Using the callback function */
+   ,featureFn:  function (layer, feature, opts) {
+      switch(feature.properties.status) {
+          case 'Partner':
+             opts.style.color = '#51215a';
+             opts.style.dashArray = '';
+             break;
+          case 'Proposed':
+             opts.style.color = '#51215a';
+             opts.style.dashArray = '2, 5';
+             break;
+          case 'PGC':
+             opts.style.color = '#FFA500';
+             opts.style.dashArray = '2, 5';
+             break;
+          default:
+             opts.style.color = '#FF00FF';
+      }
+      var f = L.geoJSON(feature, { style: opts.style });
+      f.addTo(layer);
+    }
    }
    ,{
       id: 'highRes'
@@ -34,7 +55,28 @@ const trail = [
       ,bbox: 'viewport'
       ,pad: .05
       ,name: ''
-      ,style: { color: '#51215a', weight: 2, zIndex: 3000 }
+      ,style: { color: '#51215a', weight: 4, zIndex: 3000 }
+       /* Using the callback function */
+   ,featureFn:  function (layer, feature, opts) {
+      switch(feature.properties.status) {
+          case 'Partner':
+             opts.style.color = '#51215a';
+             opts.style.dashArray = '';
+             break;
+          case 'Proposed':
+             opts.style.color = '#51215a';
+             opts.style.dashArray = '1, 10';
+             break;
+          case 'PGC':
+             opts.style.color = '#FFA500';
+             opts.style.dashArray = '1, 10';
+             break;
+          default:
+             opts.style.color = '#FF00FF';
+      }
+      var f = L.geoJSON(feature, { style: opts.style });
+      f.addTo(layer);
+    }
    }
 ];
 
