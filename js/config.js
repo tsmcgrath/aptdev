@@ -4,6 +4,7 @@ markers = new Markers();
 uriParms = {};
 isMobile = false;
 
+
 defaultMapOpts = {
    center: { lat: 38.925229, lng: -97.558594 }
    ,minZoom: 1
