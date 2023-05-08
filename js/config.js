@@ -21,21 +21,27 @@ const trail = [
       ,maxZoom: 13
       ,loadingId: 'loading'
       ,name: ''
-      ,style: { color: '#51215a', weight: 2, zIndex: 3000 }
+      ,style: { color: '#800080', weight: 2, zIndex: 3000 }
       ,update: 1
       /* Using the callback function */
    ,featureFn:  function (layer, feature, opts) {
       switch(feature.properties.status) {
           case 'Partner':
-             opts.style.color = '#51215a';
+             opts.style.color = '#800080';
+             opts.style.opacity = 0.7;
+             opts.style.weight = 2;
              opts.style.dashArray = '';
              break;
           case 'Proposed':
-             opts.style.color = '#51215a';
+             opts.style.color = '#800080';
+             opts.style.opacity = 1.0;
+             opts.style.weight = 3;
              opts.style.dashArray = '2, 5';
              break;
           case 'PGC':
              opts.style.color = '#FFA500';
+             opts.style.opacity = 1.0;
+             opts.style.weight = 3;
              opts.style.dashArray = '2, 5';
              break;
           default:
@@ -62,15 +68,19 @@ const trail = [
    ,featureFn:  function (layer, feature, opts) {
       switch(feature.properties.status) {
           case 'Partner':
-             opts.style.color = '#51215a';
+             opts.style.color = '#800080';
+             opts.style.opacity = 0.7;
+             opts.style.weight = 2;
              opts.style.dashArray = '';
              break;
           case 'Proposed':
-             opts.style.color = '#51215a';
+             opts.style.color = '#800080';
+             opts.style.weight = 3;
              opts.style.dashArray = '1, 10';
              break;
           case 'PGC':
              opts.style.color = '#FFA500';
+             opts.style.weight = 3;
              opts.style.dashArray = '1, 10';
              break;
           default:
