@@ -34,14 +34,14 @@
 }
 
 #info {
-   position: absolute;
-   top: 10px;
+   position: relative;
+   bottom: 20px;
    left: 10px;
    width: fit-content;
    border: 1px solid #aaa;
    background-color: white;
-   padding: 7px;
-   text-align: center;
+   padding: px;
+   text-align: right;
    border-radius: 5px;
    z-index: 2000;
 }
@@ -73,9 +73,9 @@
 }
 
 .legend {
-   position: absolute;
+   position: relative;
    right: 10px;
-   top: 100px;
+   bottom: 10px;
    width: fit-content;
    display: block;
    z-index: 2005;
@@ -124,7 +124,7 @@
 }
 
 .legendClass {
-   position: absolute;
+   position: relative;
    display: block;
    top: 85px;
    right: 10px;
