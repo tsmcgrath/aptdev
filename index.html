@@ -38,8 +38,31 @@
    <strong>Decimal Degrees:</strong><br>
    <span id="latlon">-&nbsp;&nbsp;-</span><br>
    <span id="bounds"></span>
+   <span><br></span>
+   <button type="button" class="collapsible">Legend</button>
+   <div class="content">
+      <img alt="legend icon" src="./images/APTLegend1.png" width="65%" height="65%">
+   </div>
+   <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
 </div>
-<div id="legend"></div>
+<div id="legend">
+   <!-- <img alt="legend icon" src="./images/APTLegend1.png" width="50%" height="50%"> -->
+</div>
 </body>
 </html>
 

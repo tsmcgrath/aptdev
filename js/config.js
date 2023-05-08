@@ -42,6 +42,8 @@ const trail = [
              opts.style.color = '#FF00FF';
       }
       var f = L.geoJSON(feature, { style: opts.style });
+         // below is the only new line. Use feature.properties.label to get the label
+         //layer.setText(feature.properties.label);
       f.addTo(layer);
     }
    }
@@ -75,6 +77,8 @@ const trail = [
              opts.style.color = '#FF00FF';
       }
       var f = L.geoJSON(feature, { style: opts.style });
+         // below is the only new line. Use feature.properties.label to get the label
+         // layer.setText(feature.properties.label);
       f.addTo(layer);
     }
    }
