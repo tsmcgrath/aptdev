@@ -8,7 +8,7 @@
 }
 
 #groups {
-   position: absolute;
+   position: relative;
    display: none;
    top: 10px;
    left: 10px;
@@ -24,7 +24,7 @@
 }
 
 #layers {
-   position: absolute;
+   position: relative;
    top: 80px;
    left: 10px;
    margin: 0px;
@@ -40,7 +40,7 @@
    width: fit-content;
    border: 1px solid #aaa;
    background-color: white;
-   padding: px;
+   padding: 1px;
    text-align: right;
    border-radius: 5px;
    z-index: 2000;
